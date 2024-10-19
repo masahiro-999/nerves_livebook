@@ -7,7 +7,7 @@ defmodule NervesLivebook.MixProject do
 
   @rpi_targets [:rpi, :rpi0, :rpi2, :rpi3, :rpi3a, :rpi4, :rpi0_2, :rpi5]
   @all_targets @rpi_targets ++
-                 [:bbb, :osd32mp1, :x86_64, :npi_imx6ull, :grisp2, :mangopi_mq_pro]
+                 [:bbb, :osd32mp1, :x86_64, :npi_imx6ull, :grisp2, :mangopi_mq_pro, :core_mp135]
 
   # See the BlueHeron repository for the boards that it supports.
   @ble_targets [:rpi0, :rpi3, :rpi3a]
@@ -132,6 +132,7 @@ defmodule NervesLivebook.MixProject do
       {:nerves_system_npi_imx6ull, "~> 0.16", runtime: false, targets: :npi_imx6ull},
       {:nerves_system_grisp2, "~> 0.12", runtime: false, targets: :grisp2},
       {:nerves_system_mangopi_mq_pro, "~> 0.10", runtime: false, targets: :mangopi_mq_pro},
+      {:core_mp135, github: "masahiro-999/core_mp135", runtime: false, targets: :core_mp135},
 
       # Compile-time only
       {:credo, "~> 1.6", only: :dev, runtime: false},
